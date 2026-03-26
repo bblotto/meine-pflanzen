@@ -31,11 +31,32 @@
             margin-bottom: 1.5rem;
             border-radius: 10px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            position: relative; /* Wichtig für die Positionierung des Bildes */
+            overflow: hidden;   /* Verhindert Überlappen am Rand */
+        }
+        /* Das neue Bild-Styling */
+        .profile-img {
+            float: right;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%; /* Macht das Bild rund */
+            border: 3px solid #4caf50;
+            margin-left: 20px;
+            margin-bottom: 10px;
         }
         footer {
             text-align: center;
             padding: 1rem;
             background-color: #e0e0e0;
+        }
+        /* Mobile Optimierung: Bild zentrieren, wenn der Platz knapp wird */
+        @media (max-width: 600px) {
+            .profile-img {
+                float: none;
+                display: block;
+                margin: 0 auto 15px auto;
+            }
         }
     </style>
 </head>
@@ -48,6 +69,8 @@
 
 <section>
     <div class="card">
+        <img src="berclay2.png" alt="Berclay Blotto" class="profile-img">
+        
         <h2>Was ist Pflanzenkunde?</h2>
         <p>
             Pflanzenkunde (Botanik) beschäftigt sich mit Aufbau, Wachstum und Pflege von Pflanzen.
@@ -96,7 +119,6 @@
             <li>Mulchen zur Bodenverbesserung</li>
         </ul>
     </div>
-    <img src="berclay2.png" alt="Me" style="float: right; margin-left: 15px; width: 150px;">
 </section>
 
 <footer>
